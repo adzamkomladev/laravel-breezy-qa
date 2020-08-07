@@ -1,1 +1,101 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Font Awesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+
+// Questions index
+.counters {
+  margin-right: 30px;
+  font-size: 10px;
+  text-align: center;
+
+  strong {
+    display: block;
+    font-size: 2em;
+  }
+
+  .votes,
+  .answers {
+    width: 60px;
+    height: 60px;
+  }
+
+  .status {
+    &.unanswered {
+      border: none;
+    }
+
+    &.answered {
+      border: 1px solid $success;
+      color: $success;
+    }
+
+    &.answer-accepted {
+      background-color: $success;
+      color: $color-white;
+    }
+
+    .view {
+      margin-top: 10px;
+    }
+  }
+}
+
+form.delete-form {
+  display: inline;
+}
+
+// Show Question
+.vote-controls {
+  min-width: 60px;
+  margin-right: 30px;
+  text-align: center;
+  color: $gray-700;
+
+  span, a {
+    color: $gray-700;
+    display: block;
+  }
+
+  span {
+    &.votes-count {
+      font-size: 25px;
+    }
+
+    &.favourites-count {
+      font-size: 12px;
+    }
+  }
+
+  a {
+    cursor: pointer;
+
+    &.off, &.off:hover {
+      color: $gray-500;
+    }
+
+    &.favourite {
+      &.favoured, &.favoured:hover {
+        color: $warning;
+      }
+    }
+
+    &.answer-accepted {
+      color: $success;
+    }
+  }
+}
+
+// Answer
+.post {
+  padding: 20px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($black, .1);
+  }
+}
